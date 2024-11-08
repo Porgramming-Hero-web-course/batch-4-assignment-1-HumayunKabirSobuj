@@ -1,12 +1,10 @@
+const countWordOccurrences = (sentence:string, word:string)=>{
+    const lowerCaseOfSentence = sentence.toLocaleLowerCase();
+    const lowerCaseOfWord = word.toLocaleLowerCase();
 
-const countWordOccurrences = (sentence: string, word: string) => {
-    let count = 0;
-    const splitSentence = sentence.split(' ');
-    for (let singleWord of splitSentence) {
-        if (singleWord === word) {
-            count = count + 1
-        }
-    }
-    return count;
+    const WordPresentInSentence = lowerCaseOfSentence.split(' ');
+    const ArrayOfMatchingWord= WordPresentInSentence.filter(w=>w === lowerCaseOfWord)
+
+    return ArrayOfMatchingWord.length
 }
 
